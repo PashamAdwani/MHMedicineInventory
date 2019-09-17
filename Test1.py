@@ -53,9 +53,10 @@ def changeAmountInventory(pathCh,pathInv,bagsNum):
                 x=float(dupInv['Amount'][i])-float(dupMix['Quantity'][j])
                 dupInv['Amount'][i]=x
 
-    dupInv.to_csv(path_or_buf=r'E:\pasham\MedicineHPF\Items\Inventory.csv')
+    l=dupInv[['Product','Amount']]
+    l.to_csv(path_or_buf=r'E:\pasham\MedicineHPF\Items\Inventory1.csv')
     print('The New Inventory is:')
-    print(dupInv)
+    print(l)
     
     
     
